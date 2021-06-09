@@ -31,3 +31,6 @@ print("Describe Grades:\n",grades.describe(),'\n')
 print("Eva's grades\n",grades['Eva'],'\n')
 
 print("Wally's grades\n",grades.Wally,'\n')
+
+print("A series values of Test1\n",grades.loc['Test1'])
+
