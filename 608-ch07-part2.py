@@ -18,19 +18,38 @@ grades.index =  ['Test1','Test2','Test3']
 print(grades)
 
 #print(grades[0])
-print("This is grades at in index of 0:\n",grades.iloc[0],"\n")
-print("Count of Grades:\n",grades.count(),"\n")
-print("Mean of Grades:\n",grades.mean(),"\n")
-print("Lowest Grade:\n",grades.min(),"\n")
-print("Highest Grade:\n",grades.max(),"\n")
-print("Standard Deviation of Grades:\n",grades.std(),"\n")
+#print("This is grades at in index of 0:\n",grades.iloc[0],"\n")
+#print("Count of Grades:\n",grades.count(),"\n")
+#print("Mean of Grades:\n",grades.mean(),"\n")
+#print("Lowest Grade:\n",grades.min(),"\n")
+#print("Highest Grade:\n",grades.max(),"\n")
+#print("Standard Deviation of Grades:\n",grades.std(),"\n")
 pd.set_option('precision', 2) 
 
-print("Describe Grades:\n",grades.describe(),'\n')
+
 
 print("Eva's grades\n",grades['Eva'],'\n')
 
-print("Wally's grades\n",grades.Wally,'\n')
+print("Sam's grades\n",grades.Sam,'\n')
 
-print("A series values of Test1\n",grades.loc['Test1'])
+print("Grades at .loc['Test1']\n",grades.loc['Test1'],'\n')
 
+print("Value of grades at .iLoc[0]\n",grades.iloc[0],'\n')
+
+print("Value of grades at .iLoc[1]\n",grades.iloc[1],'\n')
+
+print("grades from ['Test2','Eva']: ",grades.at['Test2','Eva'],'\n')
+
+print("grades from [2,0]: ",grades.iat[2,0],'\n')
+
+print("Describe Grades:\n",grades.describe(),'\n')
+
+print("Mean of Grades:\n",grades.mean(),"\n")
+
+print("Grades sorted descending\n", grades.sort_index(ascending=False),'\n')
+
+print("Sorting the columsn so the names appear in order\n",grades.sort_index(axis=1))
+
+
+#for grade in len(grades.columns):
+#    print("Grades for ",grades[grade].mean)
